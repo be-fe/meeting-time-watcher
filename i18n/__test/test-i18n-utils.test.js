@@ -1,9 +1,12 @@
 var lazy = require('lazy-assert');
-var i18n = require('../i18n-utils')();
+
+var i18n = require('../i18n-utils');
 
 describe('Test the i18n utils', function () {
     before(function() {
         lazy.setLocation(__filename);
+
+        i18n('zh_CN');
     });
 
     it('Should process the arguments correctly', function () {
@@ -27,7 +30,18 @@ describe('Test the i18n utils', function () {
     });
 
     it('Should use the correct language set correctly', function () {
+        var peek = lazy.newPeek('3-lang');
 
+        i18n();
+        peek.set('i18n', _i('timeLeft'));
+
+        i18n('zh_CN');
+        peek.set('i18n zh_CN', _i('timeLeft'));
+
+        i18n('en_US');
+        peek.set('i18n en_US', _i('timeLeft'));
+
+        peek.assert();
     });
 
     it('Should provide some error feedback', function () {
