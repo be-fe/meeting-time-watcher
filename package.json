@@ -1,0 +1,18 @@
+{
+  "name": "meeting-time-watcher",
+  "version": "0.1.0",
+  "description": "A tool to report the remaining time on timed meeting",
+  "main": "index.js",
+  "author": "lzheng",
+  "license": "MIT",
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha ./**/__test/*.test.js"
+  },
+  "devDependencies": {
+    "commander": "^2.11.0",
+    "istanbul": "^0.4.5",
+    "lazy-assert": "^0.1.1",
+    "mocha": "^3.5.0",
+    "shell-promise": "^1.0.0"
+  }
+}

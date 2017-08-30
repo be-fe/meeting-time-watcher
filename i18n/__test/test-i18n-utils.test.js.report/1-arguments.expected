@@ -1,0 +1,8 @@
+{}
+  no arg : "还有"
+  one arg "hello" : "还有hello"
+  one arg 123 : "还有123"
+  one arg null : "还有"
+  one arg undefined : "还有"
+  two args 123, "123" : "还有123"
+  two args undefined true : "还有true"
