@@ -21,8 +21,4 @@ module.exports = function (lang) {
             });
         }
     };
-
-    for (var key in langMap) {
-        global._i[key] = key;
-    }
 };

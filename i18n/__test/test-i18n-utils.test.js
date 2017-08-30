@@ -25,7 +25,7 @@ describe('Test the i18n utils', function () {
 
     it('Should handle escaped cases', function () {
         lazy.peek('2-escaped', {
-            '_i(testKey, ...)': _i(_i.testKey, 'arg#1', 'arg#2', 'arg#3')
+            '_i(testKey, ...)': _i('testKey', 'arg#1', 'arg#2', 'arg#3')
         });
     });
 
@@ -45,6 +45,8 @@ describe('Test the i18n utils', function () {
     });
 
     it('Should provide some error feedback', function () {
-
+        lazy.peek('4-errors', {
+            'key not found': _i('key-not-found', 1, 2)
+        });
     });
 });
