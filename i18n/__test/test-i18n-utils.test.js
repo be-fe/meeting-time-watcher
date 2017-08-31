@@ -6,7 +6,7 @@ describe('Test the i18n utils', function () {
     before(function() {
         lazy.setLocation(__filename);
 
-        i18n.init('zh_CN');
+        i18n.init('cn');
     });
 
     it('Should process the arguments correctly', function () {
@@ -35,11 +35,14 @@ describe('Test the i18n utils', function () {
         i18n.init();
         peek.set('i18n', _i('timeLeft'));
 
-        i18n.init('zh_CN');
-        peek.set('i18n zh_CN', _i('timeLeft'));
+        i18n.init('cn');
+        peek.set('i18n cn', _i('timeLeft'));
 
-        i18n.init('en_US');
-        peek.set('i18n en_US', _i('timeLeft'));
+        i18n.init('not-exist');
+        peek.set('i18n not exist', _i('timeLeft'));
+
+        i18n.init('en');
+        peek.set('i18n en', _i('timeLeft'));
 
         peek.assert();
     });

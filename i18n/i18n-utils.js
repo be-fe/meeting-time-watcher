@@ -1,8 +1,14 @@
 module.exports = {
     init: function (lang) {
-        lang = lang || 'zh_CN';
+        lang = lang || 'cn';
+        var langMap;
 
-        var langMap = require('./lang/' + lang);
+        try {
+            langMap = require('./lang/' + lang);
+        }
+        catch (ex) {
+            langMap = require('./lang/' + (lang = 'cn'));
+        }
 
         global._i = function (key /*, ...args */) {
             var raw = langMap[key];
