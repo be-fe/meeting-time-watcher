@@ -1,0 +1,22 @@
+{}
+  01 command -d abc : {}
+    duration : NaN
+    errors : []
+      0 : "Duration cannot be parsed as an integer"
+    lang : "cn"
+    overdueInterval : 2
+    warnings : []
+  02 command -o null : {}
+    duration : 8
+    errors : []
+      0 : "Overdue interval cannot be parsed as an integer"
+    lang : "cn"
+    overdueInterval : NaN
+    warnings : []
+  03 command -d 123abc -o null : {}
+    duration : 123
+    errors : []
+      0 : "Overdue interval cannot be parsed as an integer"
+    lang : "cn"
+    overdueInterval : NaN
+    warnings : []

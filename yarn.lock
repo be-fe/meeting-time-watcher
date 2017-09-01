@@ -235,9 +235,9 @@ kind-of@^3.0.2:
   dependencies:
     is-buffer "^1.1.5"
 
-lazy-assert@^0.1.1:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/lazy-assert/-/lazy-assert-0.1.1.tgz#ee1050ed114d01569f04bb9d887afa62f7870e92"
+lazy-assert@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.npmjs.org/lazy-assert/-/lazy-assert-0.1.3.tgz#ecf105be66df36d81f93d831a0b38d1735972061"
 
 lazy-cache@^1.0.3:
   version "1.0.4"
